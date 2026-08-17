@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Anniversary ❤️</title>
+  
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 40px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 15px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.heart {
+  font-size: 90px;
+  animation: beat 1s infinite;
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff5f7e;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.photo-box {
+  width: 260px;
+  height: 300px;
+  border: 4px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  }
+
+.memory {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 350px;
+}
+
+@keyframes beat {
+  50% {
+    transform: scale(1.2);
+  }
+}
+  .page.active {
+  animation: fadeIn 1s ease;
+}
+
+.heart {
+  animation: beat 1s infinite, float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+button {
+  transition: transform 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+</style>
+</head>
+
+<body>
+
+  <audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <div class="heart">❤️</div>
+  <h1>Happy Anniversary!</h1>
+  <p>Our Love Story 💕</p>
+  <p>အတူရှိလာခဲ့တာ အရမ်းပျော်ပါတယ် 🥰</p>
+  <button onclick="nextPage()">Next 💌</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <h1>Our Photos 📸</h1>
+
+  <div class="photo-box">
+    <img src="a.jpg" alt="Our Photo">
+  </div>
+
+  <p>ကိုကိုနဲ့အတူရှိတဲ့ အချိန်တိုင်းက<br>အမှတ်တရပါပဲ ❤️</p>
+
+  <button onclick="nextPage()">Next 💕</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+  <div class="heart">💌</div>
+
+  <h1>Love Letter</h1>
+
+  <div class="memory">
+    <p>
+      ကိုကိုနဲ့တွေ့ခဲ့ရတာ<br>
+      ကိုကိုနဲ့အတူရှိရတာ<br>
+      သဲတုန်းဘဝရဲ့ အကောင်းဆုံးအရာတွေထဲက<br>
+      တစ်ခုပါ ❤️
+    </p>
+
+    <p>
+      ဘယ်အချိန်ဖြစ်ဖြစ်<br>
+      ကိုကိုနဲ့အတူရှိချင်တယ် 🥰
+    </p>
+  </div>
+
+  <button onclick="nextPage()">Next 🥰</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+  <div class="heart">🫶</div>
+
+  <h1>Our Memories 💕</h1>
+
+  <div class="memory">
+    <p>💕 ကိုကိုနဲ့ ပထမဆုံးတွေ့ခဲ့တဲ့နေ့</p>
+    <p>💕 ပထမဆုံး Date လုပ်ခဲ့တဲ့နေ့</p>
+    <p>💕 ကိုကိုနဲ့အတူတူဖြတ်သန်းခဲ့တဲ့ အချိန်တွေ</p>
+    <p>💕 ကိုကိုနဲ့ သဲတုန်းရဲ့ အမှတ်တရတိုင်း</p>
+    <p>💕 သဲတုန်းဆိုးသမျှကို အလိုလိုက်ပြီး သည်းခံပေးခဲ့တာတွေ</p>
+    <p>💕 ကိုကို့ကို ပထမဆုံးအနမ်းပေးခဲ့တဲ့အချိန်‌ေလး</p>
+  </div>
+
+  <button onclick="nextPage()">Final Page 🎂</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="page5">
+  <div class="heart">❤️</div>
+
+  <h1>Happy Anniversary</h1>
+
+  <h2>My Love 💕</h2>
+
+  <p>
+    ကိုကို့ကို အမြဲတမ်းချစ်နေမယ်‌ေနာ် ❤️<br>
+    အခု3years&4months Anniversaryမှစပြီးတစ်သက်လံုး သက်ဆံုးတိုင်အထိအမြဲတမ်းချစ်သွားကြမယ်‌ေနာ် ကိုကိုနဲ့သက်ဆံုးတိုင်ထိအတူတူရှိချင်တယ် 🥰
+  </p>
+
+  <p>
+    သဲတုန်းတို့နှစ်ယောက်<br>
+    ဒီထက်ပိုပြီး ပျော်ရွှင်စွာ<br>
+    အတူတူဖြတ်သန်းကြမယ်နော် အများကြီးချစ်တယ်‌ေနာ်💕
+  </p>
+
+  <p>
+    Forever With You 💖
+  </p>
+
+  <button onclick="location.reload()">Start Again 🔄</button>
+</div>
+
+<script>
+let currentPage = 1;
+
+function nextPage() {
+  let music = document.getElementById("bgMusic");
+
+if (music.paused) {
+  music.currentTime = 23;
+  music.play();
+}
+  document.getElementById("page" + currentPage).classList.remove("active");
+  currentPage++;
+
+document.getElementById("page" + currentPage).classList.add("active");
+}
+</script>
